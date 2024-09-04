@@ -1,5 +1,6 @@
 package com.example.project;
 
+
 public class String1 {
 	private char[] str;
 	private int size;
