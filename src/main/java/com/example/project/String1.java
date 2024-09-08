@@ -37,18 +37,19 @@ public class String1 {
 	public boolean equal(String1 s) {
 
 		for (int i = 0; i < s.length(); i++) {
-			if (s.getChar(i) != str[i]) {
+			if (s.getChar(i) != str[i])
 				return false;
-			}
 
-			return true; }
 		}
+		return true;
+
+	}
 
 	public void reverse() {
 		for (int i = 0; i <= length() / 2; i++) {
-			char temp = str[i]; 
-			str[i] = str[size - i]; 
-			str[size - i] = temp; 
+			char temp = str[i];
+			str[i] = str[size - i];
+			str[size - i] = temp;
 		}
 	}
 
