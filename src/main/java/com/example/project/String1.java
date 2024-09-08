@@ -1,12 +1,12 @@
-//package com.example.project;
+package com.example.project;
 
 
 
-public class string1 {
+public class String1 {
 	private char[] str;
 	private int size;
 
-	public string1() {
+	public String1() {
 		size = -1;
 		str = new char[80];
 	}
@@ -31,7 +31,7 @@ public class string1 {
 		size = -1;
 	}
 
-	public void concat(string1 s) {
+	public void concat(String1 s) {
 		for (int i = 0; i < s.length(); i++)
 			append(s.getChar(i));
 	}
@@ -39,8 +39,8 @@ public class string1 {
 	
 	public boolean equals(Object obj) {
 	    // Check if the object is an instance of String1
-	    if (obj instanceof string1) {
-	        string1 s = (string1) obj; // Cast the object to String1
+	    if (obj instanceof String1) {
+	        String1 s = (String1) obj; // Cast the object to String1
 
 	        // Check if the sizes (or lengths) are equal
 	        if (s.size == this.size) {  // Assuming `size` is a valid field in your String1 class
