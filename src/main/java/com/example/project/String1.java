@@ -1,4 +1,4 @@
-package com.example.project;
+//package com.example.project;
 
 
 
@@ -36,17 +36,26 @@ public class String1 {
 			append(s.getChar(i));
 	}
 
-	public boolean equals(String1 s) {
-			if (s.size == this.size) {
-				for (int i = 0; i <s.size; i++) {
-					if (s.getChar(i) != this.getChar(i))
-						return false;
-				}
-				return true;
+	
+	public boolean equals(Object obj) {
+	    // Check if the object is an instance of String1
+	    if (obj instanceof String1) {
+	        String1 s = (String1) obj; // Cast the object to String1
 
-			}
-		return false;
+	        // Check if the sizes (or lengths) are equal
+	        if (s.size == this.size) {  // Assuming `size` is a valid field in your String1 class
+	            // Compare each character of the two strings
+	            for (int i = 0; i < s.size; i++) {
+	                if (s.getChar(i) != this.getChar(i)) {
+	                    return false; // Return false if any character does not match
+	                }
+	            }
+	            return true; // Return true if all characters match
+	        }
+	    }
+	    return false; // Return false if not an instance of String1 or sizes do not match
 	}
+
 
 	public void reverse() {
 		if(size<0)
