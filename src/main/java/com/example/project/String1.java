@@ -47,14 +47,16 @@ public class String1 {
 	}
 
 	public void reverse() {
-		if (size < 0)
-			return;
-		for (int i = 0; i <= size / 2; i++) {
-			char temp = str[size - i];
-			str[size - i] = str[i];
-			str[i] = temp;
-
-		}
+	    if (size < 0) {
+	        return; // Return early if the string is empty
+	    }
+	    // Iterate only up to the middle of the string
+	    for (int i = 0; i <= size / 2; i++) {
+	        char temp = str[i];       // Store the character at the current index
+	        str[i] = str[size - i];   // Swap character from the end to the current index
+	        str[size - i] = temp;     // Place the stored character to the end position
+	    }
 	}
+
 
 }
