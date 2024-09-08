@@ -36,12 +36,9 @@ public class String1 {
 			append(s.getChar(i));
 	}
 
-	public boolean equal(String1 s) {
-		if (s.size < 0 || this.size < 0) {
-			return false;
-		}
+	public boolean equals(String1 s) {
 			if (s.size == this.size) {
-				for (int i = 0; i <= s.size; i++) {
+				for (int i = 0; i <s.size; i++) {
 					if (s.getChar(i) != this.getChar(i))
 						return false;
 				}
